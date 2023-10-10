@@ -51,7 +51,7 @@ const message = {
   birthdate: 'Vous devez entrer votre date de naissance.',
   quantity: 'Veuillez renseigner un nombre entre 0 et 99',
   city: 'Vous devez choisir une option.',
-  conditions: `Vous devez vérifier que vous acceptez les termes et conditions.`,
+  conditions: 'Vous devez vérifier que vous acceptez les termes et conditions.',
 }
 
 //Regex
@@ -67,6 +67,13 @@ birthdateField.addEventListener('change', () => checkIfUserIsMinor(birthdateFiel
 quantityField.addEventListener('change', () => checkInputValue(regexQuantity, quantityField, message.quantity));
 conditionsCheckbox.addEventListener('input', () => checkIfConditionsAccepted(conditionsCheckbox, message.conditions));
 allBtnRadio.forEach(radio => radio.addEventListener('change', () => checkIfCitySelected(allBtnRadio, message.city)));
+
+/* autre ecriture de la fonction ecoute
+function handleChange() {
+  checkInputValue(regexName, firstnameField, message.name);
+}
+firstnameField.addEventListener('change', handleChange);
+*/
 
 //Cette fonction affiche le message d'erreur passé en paramètre. 
 const setErrorMessage = (element, message) => {
@@ -124,7 +131,6 @@ function checkIfUserIsMinor(element, message) {
       setErrorMessage(element, message);
       return false;
   } 
-
   hideErrorMessage(element);
   return true;
 }
