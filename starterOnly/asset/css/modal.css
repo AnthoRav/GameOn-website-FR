@@ -204,7 +204,7 @@ main {
 
 .modal_content,
 .content {
-  margin: 5% auto;
+  /*margin: 5% auto;*/
   width: 100%;
   max-width: 500px;
   animation-name: modalopen;
@@ -220,12 +220,12 @@ main {
 .modal_content{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
-  gap: 40px;
-  padding: 40px;
+  gap: 280px;
+  padding: 50px;
   max-width: 500px;
-  height: 100%;
+  height: 85%;
 }
 
 
@@ -587,7 +587,7 @@ footer {
     margin-top: 5px;
     text-align: center;
   }
-  .bground {
+  .bground, .modal_success {
     display: none;
     flex-wrap: wrap;
     align-content: end;
@@ -595,7 +595,6 @@ footer {
   .content {
     margin: 0;
     border-radius: 10px 10px 0 0;
-    max-height: 650px;
   }
 }
 
